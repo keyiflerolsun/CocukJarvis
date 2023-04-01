@@ -30,14 +30,16 @@ def jarvis(prompt:str):
         temperature = 0.7,
         messages    = mesaj_gecmisi,
     )
-
-    return cevaplar.choices[0].message["content"].strip()
+    cevap = cevaplar.choices[0].message["content"].strip()
+    mesaj_gecmisi.append({"role" : "assistant", "content" : cevap})
+    return cevap
 
 while True:
     girdi = ses2yazi()
     konsol.log(f"[yellow][»] {girdi}")
 
     cevap = jarvis(girdi)
+    
     konsol.log(f"[green][+] {cevap}")
 
     if AYAR["SESLENDIRME"]["INCE"]:
