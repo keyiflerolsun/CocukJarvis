@@ -5,6 +5,7 @@ Kekik
 PyYAML
 PyAudio
 SpeechRecognition
+beepy
 gTTS
 playsound
 openai
