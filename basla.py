@@ -37,7 +37,10 @@ def jarvis(prompt:str):
     return cevap
 
 while True:
-    girdi = ses2yazi(AYAR["SesKontrol"]["n_saniye_dinle"] or None)
+    girdi = ses2yazi(n_saniye_dinle=AYAR["SesKontrol"]["n_saniye_dinle"] or None, bip=AYAR["SesKontrol"]["bip_sesi"])
+    if not girdi:
+        continue
+
     konsol.log(f"[yellow][»] {girdi}")
 
     cevap = jarvis(girdi)

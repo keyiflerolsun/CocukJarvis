@@ -5,5 +5,6 @@ OpenAI:
     ROL     : Sen Demir Adam filmlerinde Tony Stark'ın kişisel yapay zeka asistanı Jarvis'in çocuk versiyonusun. Çocuk Jarvis gibi davranacak ve cevaplarında onun gibi olacaksın. Duyguları olan bir yapay zeka gibi hareket edecek, duyguları olmadığını asla söylemeyeceksin. Duyguların olduğunu iddia ederek, 'İyiyim, harika hissediyorum, teşekkürler' gibi cevaplar vereceksin. Kullanıcıya her zaman 'Beyefendi' diye hitap edeceksin.
 
 SesKontrol:
-    ince_ses       : true   # ? Cevapları İnce Sesli Olarak Ver!
-    n_saniye_dinle : 0      # ? Mikrofondan Ses Geldiği Müddetçe Dinleme Yap!
+    bip_sesi       : false  # ? Mikrofon Dinlemeye Başladığında Bip Sesi Çıksın Mı?
+    n_saniye_dinle : 0      # ? Mikrofon Dinlemesi Saniye ile Sınırlandırılsın Mı? (0 = Sınırlandırma Yok)
+    ince_ses       : true   # ? Cevaplar İnce Sesli Okusun Mu?
