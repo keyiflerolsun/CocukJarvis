@@ -13,18 +13,22 @@ with open("AYAR.yml", "r") as yaml_dosyasi:
 
 openai.api_key = AYAR["OpenAI"]["API_KEY"]
 
-messages = [
-    {"role" : "system", "content" : AYAR["OpenAI"]["ROL"]},
+mesaj_gecmisi = [
+    {"role" : "system", "content" : AYAR["OpenAI"]["ROL"]}
 ]
+
 def jarvis(prompt:str):
-    messages.append({"role" : "user", "content" : prompt})
+    global mesaj_gecmisi
+
+    mesaj_gecmisi.append({"role" : "user", "content" : prompt})
+
     cevaplar = openai.ChatCompletion.create(
         model       = "gpt-3.5-turbo",
         max_tokens  = 1000,
         n           = 1,
         stop        = None,
         temperature = 0.7,
-        messages    = messages,
+        messages    = mesaj_gecmisi,
     )
 
     return cevaplar.choices[0].message["content"].strip()
@@ -32,8 +36,8 @@ def jarvis(prompt:str):
 while True:
     girdi = ses2yazi()
     konsol.log(f"[yellow][»] {girdi}")
+
     cevap = jarvis(girdi)
-    messages.append({"role" : "assistant", "content" : cevap})
     konsol.log(f"[green][+] {cevap}")
 
     if AYAR["SESLENDIRME"]["INCE"]:
