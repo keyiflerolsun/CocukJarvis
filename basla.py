@@ -41,9 +41,18 @@ while True:
     if not girdi:
         continue
 
+    if "yeni konuşma başlat" in girdi:
+        mesaj_gecmisi = [
+            {"role": "system", "content": AYAR["OpenAI"]["ROL"]}
+        ]
+        konsol.log(f"[green][!] Yeni Konuşma Başlatıldı")
+        continue
+
     konsol.log(f"[yellow][»] {girdi}")
 
     cevap = jarvis(girdi)
+
+
     konsol.log(f"[green][+] {cevap}")
 
     if AYAR["SesKontrol"]["ince_ses"]:
