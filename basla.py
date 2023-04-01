@@ -14,13 +14,13 @@ with open("AYAR.yml", "r") as yaml_dosyasi:
 openai.api_key = AYAR["OpenAI"]["API_KEY"]
 
 mesaj_gecmisi = [
-    {"role" : "system", "content" : AYAR["OpenAI"]["ROL"]}
+    {"role": "system", "content": AYAR["OpenAI"]["ROL"]}
 ]
 
 def jarvis(prompt:str):
     global mesaj_gecmisi
 
-    mesaj_gecmisi.append({"role" : "user", "content" : prompt})
+    mesaj_gecmisi.append({"role": "user", "content": prompt})
 
     cevaplar = openai.ChatCompletion.create(
         model       = "gpt-3.5-turbo",
@@ -30,19 +30,20 @@ def jarvis(prompt:str):
         temperature = 0.7,
         messages    = mesaj_gecmisi,
     )
+
     cevap = cevaplar.choices[0].message["content"].strip()
-    mesaj_gecmisi.append({"role" : "assistant", "content" : cevap})
+    mesaj_gecmisi.append({"role": "assistant", "content": cevap})
+
     return cevap
 
 while True:
-    girdi = ses2yazi()
+    girdi = ses2yazi(AYAR["SesKontrol"]["n_saniye_dinle"] or None)
     konsol.log(f"[yellow][»] {girdi}")
 
     cevap = jarvis(girdi)
-    
     konsol.log(f"[green][+] {cevap}")
 
-    if AYAR["SESLENDIRME"]["INCE"]:
+    if AYAR["SesKontrol"]["ince_ses"]:
         playsound(inceses(cevap, "cevap"))
     else:
         playsound(yazi2ses(cevap, "cevap"))
