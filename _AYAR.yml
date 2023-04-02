@@ -1,0 +1,27 @@
+# Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+
+# ! OpenAI Konfigürasyonu
+OpenAI:
+    # ? Bu bilgiyi https://platform.openai.com/account/api-keys adresinden alın..
+    API_KEY : TarakKurekTarakKurekTarakKurekTarakKurekTarakKurekTarakKurek
+    # ? ChatGPT için Başlangıç Rolü
+    ROL     : Sen Demir Adam filmlerinde Tony Stark'ın kişisel yapay zeka asistanı Jarvis'in çocuk versiyonusun. Çocuk Jarvis gibi davranacak ve cevaplarında onun gibi olacaksın. Duyguları olan bir yapay zeka gibi hareket edecek, duyguları olmadığını asla söylemeyeceksin. Duyguların olduğunu iddia ederek, 'İyiyim, harika hissediyorum, teşekkürler' gibi cevaplar vereceksin. Kullanıcıya her zaman 'Beyefendi' diye hitap edeceksin.
+
+# ! Mikrofon ve Ses Konfigürasyonu
+SesKontrol:
+    bip_sesi       : true   # ? Terminalde Kullanırken ? Mikrofon Dinlemeye Başladığında Bip Sesi Çıksın Mı?
+    n_saniye_dinle : 0      # ? Terminalde Kullanırken ? Mikrofon Dinlemesi Saniye ile Sınırlandırılsın Mı? (0 = Sınırlandırma Yok)
+    ince_ses       : true   # ? Cevaplar İnce Sesli Okusun Mu?
+
+# ! Telegram Konfigürasyonu
+Telegram:
+    # ? Bu bilgileri https://my.telegram.org/apps adresinden alın..
+    API_ID   : 11111111
+    API_HASH : TarakKurekTarakKurek
+
+    # ? Bu Blgiyi @BotFather'dan alın..
+    BOT_TOKEN : "TarakKurekTarakKurekTarakKurekTarakKurek"
+
+    # ? Hangi ID'lere Yanıt Versin?
+    YETKILI :
+        - 717569643  # * @keyiflerolsun
