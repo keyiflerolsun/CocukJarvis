@@ -19,11 +19,14 @@ pip3 install -Ur requirements.txt
 docker compose up -d --build
 ```
 **Sistemimde Docker Yüklü Değil Ne Yapmalıyım?**
+
 [Linux](https://docs.docker.com/desktop/install/linux-install/)
 [Windows](https://docs.docker.com/desktop/install/windows-install)
 
 **Terminal Versiyonunu Nasıl Çalıştırılır?**
+
 *Gerekli Kütüphanelerin Kurulumu*
+
 ```bash
 pip3 install -Ur requirements.txt
 ```
