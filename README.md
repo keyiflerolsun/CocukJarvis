@@ -1,3 +1,4 @@
+
 # Çocuk Jarvis
 
 ![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/CocukJarvis?logo=git&logoColor=white)
@@ -11,15 +12,25 @@
 [![ForTheBadge built-with-love](https://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/keyiflerolsun/)
 
 ## 🚀 Kurulum, Kullanım, Ayarlamalar
-
+**Telegram Versiyonunu Nasıl Çalıştırılır?**
 ```bash
 pip3 install -Ur requirements.txt
-
 # veya
-
 docker compose up -d --build
+```
+**Sistemimde Docker Yüklü Değil Ne Yapmalıyım?**
+[Linux](https://docs.docker.com/desktop/install/linux-install/)
+[Windows](https://docs.docker.com/desktop/install/windows-install)
 
-# » Yazarız Bi Ara
+**Terminal Versiyonunu Nasıl Çalıştırılır?**
+*Gerekli Kütüphanelerin Kurulumu*
+```bash
+pip3 install -Ur requirements.txt
+```
+*Çalıştırılması*
+
+```bash
+python terminal.py
 ```
 
 ## 💸 Bağış Yap
