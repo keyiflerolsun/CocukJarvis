@@ -1,0 +1,20 @@
+# Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+
+version: "3.9"
+
+networks:
+    local:
+        driver: bridge
+
+services:
+
+    cocukjarvis:
+        container_name : cocukjarvis
+        image          : cocukjarvis:latest
+        restart        : always
+        build          : .
+
+        networks:
+            - local
+        volumes:
+            - .:/usr/src/CocukJarvis
